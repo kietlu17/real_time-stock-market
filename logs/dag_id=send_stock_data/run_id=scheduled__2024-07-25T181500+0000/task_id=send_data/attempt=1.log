@@ -1,0 +1,58 @@
+[2024-07-25 18:16:50,867] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.send_data scheduled__2024-07-25T18:15:00+00:00 [queued]>
+[2024-07-25 18:16:50,876] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.send_data scheduled__2024-07-25T18:15:00+00:00 [queued]>
+[2024-07-25 18:16:50,876] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-25 18:16:50,876] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2024-07-25 18:16:50,876] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-25 18:16:50,890] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): send_data> on 2024-07-25 18:15:00+00:00
+[2024-07-25 18:16:50,894] {standard_task_runner.py:52} INFO - Started process 1210 to run task
+[2024-07-25 18:16:50,896] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'send_data', 'scheduled__2024-07-25T18:15:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp0ohj2tsx', '--error-file', '/tmp/tmpicx9gz24']
+[2024-07-25 18:16:50,896] {standard_task_runner.py:80} INFO - Job 51: Subtask send_data
+[2024-07-25 18:16:50,909] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.10/site-packages/***/configuration.py:528 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-25 18:16:50,949] {task_command.py:371} INFO - Running <TaskInstance: send_stock_data.send_data scheduled__2024-07-25T18:15:00+00:00 [running]> on host 3375e7ece4d4
+[2024-07-25 18:16:51,001] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=send_stock_data
+AIRFLOW_CTX_TASK_ID=send_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-25T18:15:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-25T18:15:00+00:00
+[2024-07-25 18:16:54,708] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:16:54,709] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:16:58,453] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:16:58,453] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:02,193] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:02,193] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:05,934] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:05,934] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:09,677] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:09,679] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:13,432] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:13,432] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:17,196] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:17,196] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:20,963] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:20,963] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:24,727] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:24,727] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:28,489] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:28,490] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:32,246] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:32,247] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:36,007] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:36,008] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:39,756] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:39,756] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:43,523] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:43,523] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:47,286] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:47,287] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:51,011] {logging_mixin.py:115} INFO - An error occurred: KafkaTimeoutError: Failed to update metadata after 60.0 secs.
+[2024-07-25 18:17:51,012] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-07-25 18:17:51,035] {conn.py:1527} WARNING - DNS lookup failed for broker:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-25 18:17:51,035] {conn.py:315} ERROR - DNS lookup failed for broker:9092 (AddressFamily.AF_UNSPEC)
+[2024-07-25 18:17:51,036] {python.py:173} INFO - Done. Returned value was: None
+[2024-07-25 18:17:51,046] {taskinstance.py:1415} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=send_data, execution_date=20240725T181500, start_date=20240725T181650, end_date=20240725T181751
+[2024-07-25 18:17:51,100] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-07-25 18:17:51,121] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

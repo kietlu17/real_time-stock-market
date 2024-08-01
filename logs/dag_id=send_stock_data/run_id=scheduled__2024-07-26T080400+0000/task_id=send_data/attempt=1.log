@@ -1,0 +1,44 @@
+[2024-07-26 08:06:05,767] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.send_data scheduled__2024-07-26T08:04:00+00:00 [queued]>
+[2024-07-26 08:06:05,775] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.send_data scheduled__2024-07-26T08:04:00+00:00 [queued]>
+[2024-07-26 08:06:05,775] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-26 08:06:05,776] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2024-07-26 08:06:05,776] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-26 08:06:05,789] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): send_data> on 2024-07-26 08:04:00+00:00
+[2024-07-26 08:06:05,793] {standard_task_runner.py:52} INFO - Started process 829 to run task
+[2024-07-26 08:06:05,795] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'send_data', 'scheduled__2024-07-26T08:04:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmpuzekpiur', '--error-file', '/tmp/tmpz19x8oaf']
+[2024-07-26 08:06:05,796] {standard_task_runner.py:80} INFO - Job 37: Subtask send_data
+[2024-07-26 08:06:05,808] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.10/site-packages/***/configuration.py:528 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-26 08:06:05,842] {task_command.py:371} INFO - Running <TaskInstance: send_stock_data.send_data scheduled__2024-07-26T08:04:00+00:00 [running]> on host a65626265f2c
+[2024-07-26 08:06:05,892] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=send_stock_data
+AIRFLOW_CTX_TASK_ID=send_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-26T08:04:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-26T08:04:00+00:00
+[2024-07-26 08:06:09,589] {conn.py:1527} WARNING - DNS lookup failed for broker:29092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-26 08:06:09,590] {conn.py:315} ERROR - DNS lookup failed for broker:29092 (AddressFamily.AF_UNSPEC)
+[2024-07-26 08:06:09,590] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-07-26 08:06:13,292] {conn.py:1527} WARNING - DNS lookup failed for broker:29092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2024-07-26 08:06:13,293] {conn.py:315} ERROR - DNS lookup failed for broker:29092 (AddressFamily.AF_UNSPEC)
+[2024-07-26 08:06:13,293] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/airflow_stream.py", line 38, in send_data
+    producer = KafkaProducer(
+  File "/home/airflow/.local/lib/python3.10/site-packages/kafka/producer/kafka.py", line 381, in __init__
+    client = KafkaClient(metrics=self._metrics, metric_group_prefix='producer',
+  File "/home/airflow/.local/lib/python3.10/site-packages/kafka/client_async.py", line 244, in __init__
+    self.config['api_version'] = self.check_version(timeout=check_timeout)
+  File "/home/airflow/.local/lib/python3.10/site-packages/kafka/client_async.py", line 927, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2024-07-26 08:06:13,302] {taskinstance.py:1415} INFO - Marking task as FAILED. dag_id=send_stock_data, task_id=send_data, execution_date=20240726T080400, start_date=20240726T080605, end_date=20240726T080613
+[2024-07-26 08:06:13,313] {standard_task_runner.py:92} ERROR - Failed to execute job 37 for task send_data (NoBrokersAvailable; 829)
+[2024-07-26 08:06:13,345] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-07-26 08:06:13,365] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

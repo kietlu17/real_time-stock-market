@@ -1,0 +1,7 @@
+[2024-08-01T07:48:36.706+0000] {processor.py:161} INFO - Started process (PID=207) to work on /opt/airflow/dags/airflow_stream.py
+[2024-08-01T07:48:36.707+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow_stream.py for tasks to queue
+[2024-08-01T07:48:36.709+0000] {logging_mixin.py:188} INFO - [2024-08-01T07:48:36.708+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_stream.py
+[2024-08-01T07:48:37.260+0000] {processor.py:840} INFO - DAG(s) 'send_stock_data' retrieved from /opt/airflow/dags/airflow_stream.py
+[2024-08-01T07:48:37.284+0000] {logging_mixin.py:188} INFO - [2024-08-01T07:48:37.283+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-01T07:48:37.303+0000] {logging_mixin.py:188} INFO - [2024-08-01T07:48:37.303+0000] {dag.py:3947} INFO - Setting next_dagrun for send_stock_data to 2024-08-01 05:00:00+00:00, run_after=2024-08-02 05:00:00+00:00
+[2024-08-01T07:48:37.319+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_stream.py took 0.619 seconds

@@ -1,0 +1,24 @@
+[2024-07-25 18:29:59,037] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.get_data scheduled__2024-07-25T18:28:00+00:00 [queued]>
+[2024-07-25 18:29:59,044] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.get_data scheduled__2024-07-25T18:28:00+00:00 [queued]>
+[2024-07-25 18:29:59,044] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-25 18:29:59,044] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2024-07-25 18:29:59,045] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-25 18:29:59,056] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-25 18:28:00+00:00
+[2024-07-25 18:29:59,060] {standard_task_runner.py:52} INFO - Started process 1499 to run task
+[2024-07-25 18:29:59,061] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'get_data', 'scheduled__2024-07-25T18:28:00+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmpxd8fdjt5', '--error-file', '/tmp/tmpdrp3sqld']
+[2024-07-25 18:29:59,062] {standard_task_runner.py:80} INFO - Job 61: Subtask get_data
+[2024-07-25 18:29:59,073] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.10/site-packages/***/configuration.py:528 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-25 18:29:59,108] {task_command.py:371} INFO - Running <TaskInstance: send_stock_data.get_data scheduled__2024-07-25T18:28:00+00:00 [running]> on host 3375e7ece4d4
+[2024-07-25 18:29:59,155] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=send_stock_data
+AIRFLOW_CTX_TASK_ID=get_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-25T18:28:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-25T18:28:00+00:00
+[2024-07-25 18:30:00,077] {python.py:173} INFO - Done. Returned value was: {'c': 219.8801, 'd': 1.3401, 'dp': 0.6132, 'h': 220.85, 'l': 214.62, 'o': 218.87, 'pc': 218.54, 't': 1721932061}
+[2024-07-25 18:30:00,098] {taskinstance.py:1415} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=get_data, execution_date=20240725T182800, start_date=20240725T182959, end_date=20240725T183000
+[2024-07-25 18:30:00,117] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-07-25 18:30:00,149] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

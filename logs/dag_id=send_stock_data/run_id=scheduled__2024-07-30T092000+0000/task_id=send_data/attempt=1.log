@@ -1,0 +1,29 @@
+[2024-07-30T09:25:05.044+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-30T09:25:05.075+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-07-30T09:20:00+00:00 [queued]>
+[2024-07-30T09:25:05.083+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-07-30T09:20:00+00:00 [queued]>
+[2024-07-30T09:25:05.083+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-30T09:25:05.096+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): send_data> on 2024-07-30 09:20:00+00:00
+[2024-07-30T09:25:05.103+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=917) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-30T09:25:05.104+0000] {standard_task_runner.py:64} INFO - Started process 918 to run task
+[2024-07-30T09:25:05.103+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'send_data', 'scheduled__2024-07-30T09:20:00+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp6wzgd98s']
+[2024-07-30T09:25:05.104+0000] {standard_task_runner.py:91} INFO - Job 41: Subtask send_data
+[2024-07-30T09:25:05.119+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-30T09:25:05.149+0000] {task_command.py:426} INFO - Running <TaskInstance: send_stock_data.send_data scheduled__2024-07-30T09:20:00+00:00 [running]> on host 2c5d54a8b113
+[2024-07-30T09:25:05.232+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='send_stock_data' AIRFLOW_CTX_TASK_ID='send_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-30T09:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-30T09:20:00+00:00'
+[2024-07-30T09:25:05.233+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-30T09:25:06.246+0000] {logging_mixin.py:188} INFO - Delivered message to stock_data [0]
+[2024-07-30T09:25:06.247+0000] {logging_mixin.py:188} INFO - Sent: {'symbol': 'AAPL', 'date_time': '29/07/2024, 20:00:01', 'open': 217.002, 'high': 219.3, 'low': 215.76, 'current_price': 218.24, 'previous_close': 217.96, 'change_percent': 0.1285}
+[2024-07-30T09:25:06.247+0000] {logging_mixin.py:188} INFO - Delivered message to stock_data [0]
+[2024-07-30T09:25:06.248+0000] {logging_mixin.py:188} INFO - Sent: {'symbol': 'GOOGL', 'date_time': '29/07/2024, 20:00:01', 'open': 168.745, 'high': 170.43, 'low': 167.99, 'current_price': 169.53, 'previous_close': 167, 'change_percent': 1.515}
+[2024-07-30T09:25:06.249+0000] {logging_mixin.py:188} INFO - Delivered message to stock_data [0]
+[2024-07-30T09:25:06.249+0000] {logging_mixin.py:188} INFO - Sent: {'symbol': 'AMZN', 'date_time': '29/07/2024, 20:00:01', 'open': 183.65, 'high': 184.75, 'low': 182.38, 'current_price': 183.2, 'previous_close': 182.5, 'change_percent': 0.3836}
+[2024-07-30T09:25:06.250+0000] {logging_mixin.py:188} INFO - Delivered message to stock_data [0]
+[2024-07-30T09:25:06.251+0000] {logging_mixin.py:188} INFO - Sent: {'symbol': 'MSFT', 'date_time': '29/07/2024, 20:00:01', 'open': 431.55, 'high': 432.15, 'low': 424.7042, 'current_price': 426.73, 'previous_close': 425.27, 'change_percent': 0.3433}
+[2024-07-30T09:25:06.251+0000] {logging_mixin.py:188} INFO - Delivered message to stock_data [0]
+[2024-07-30T09:25:06.252+0000] {logging_mixin.py:188} INFO - Sent: {'symbol': 'TSLA', 'date_time': '29/07/2024, 20:00:01', 'open': 224.998, 'high': 234.27, 'low': 224.87, 'current_price': 232.1, 'previous_close': 219.8, 'change_percent': 5.596}
+[2024-07-30T09:25:06.252+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-30T09:25:06.253+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-30T09:25:06.263+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=send_data, run_id=scheduled__2024-07-30T09:20:00+00:00, execution_date=20240730T092000, start_date=20240730T092505, end_date=20240730T092506
+[2024-07-30T09:25:06.321+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-07-30T09:25:06.338+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-30T09:25:06.341+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

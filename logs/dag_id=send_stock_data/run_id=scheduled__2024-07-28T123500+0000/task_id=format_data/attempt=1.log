@@ -1,0 +1,19 @@
+[2024-07-28T12:40:03.944+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-28T12:40:04.002+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_stock_data.format_data scheduled__2024-07-28T12:35:00+00:00 [queued]>
+[2024-07-28T12:40:04.016+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_stock_data.format_data scheduled__2024-07-28T12:35:00+00:00 [queued]>
+[2024-07-28T12:40:04.017+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-28T12:40:04.042+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): format_data> on 2024-07-28 12:35:00+00:00
+[2024-07-28T12:40:04.054+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=675) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-28T12:40:04.055+0000] {standard_task_runner.py:64} INFO - Started process 676 to run task
+[2024-07-28T12:40:04.053+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'format_data', 'scheduled__2024-07-28T12:35:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmpx7cejs9d']
+[2024-07-28T12:40:04.059+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask format_data
+[2024-07-28T12:40:04.085+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-28T12:40:04.145+0000] {task_command.py:426} INFO - Running <TaskInstance: send_stock_data.format_data scheduled__2024-07-28T12:35:00+00:00 [running]> on host 7cbb2ba4b48d
+[2024-07-28T12:40:04.300+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='send_stock_data' AIRFLOW_CTX_TASK_ID='format_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-28T12:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-28T12:35:00+00:00'
+[2024-07-28T12:40:04.301+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-28T12:40:04.337+0000] {python.py:237} INFO - Done. Returned value was: {'date_time': '26/07/2024, 20:00:01', 'open': 218.85, 'high': 219.49, 'low': 216.01, 'current_price': 217.96, 'previous_close': 217.49, 'change_percent': 0.2161}
+[2024-07-28T12:40:04.337+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-28T12:40:04.390+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=format_data, run_id=scheduled__2024-07-28T12:35:00+00:00, execution_date=20240728T123500, start_date=20240728T124004, end_date=20240728T124004
+[2024-07-28T12:40:04.432+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-07-28T12:40:04.471+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-28T12:40:04.477+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

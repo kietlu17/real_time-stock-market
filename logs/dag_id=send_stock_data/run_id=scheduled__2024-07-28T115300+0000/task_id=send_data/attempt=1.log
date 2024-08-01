@@ -1,0 +1,26 @@
+[2024-07-28 11:54:58,882] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.send_data scheduled__2024-07-28T11:53:00+00:00 [queued]>
+[2024-07-28 11:54:58,890] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: send_stock_data.send_data scheduled__2024-07-28T11:53:00+00:00 [queued]>
+[2024-07-28 11:54:58,890] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28 11:54:58,891] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2024-07-28 11:54:58,891] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28 11:54:58,904] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): send_data> on 2024-07-28 11:53:00+00:00
+[2024-07-28 11:54:58,908] {standard_task_runner.py:52} INFO - Started process 622 to run task
+[2024-07-28 11:54:58,911] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'send_data', 'scheduled__2024-07-28T11:53:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp2ff25bbl', '--error-file', '/tmp/tmpht0oa2mg']
+[2024-07-28 11:54:58,912] {standard_task_runner.py:80} INFO - Job 22: Subtask send_data
+[2024-07-28 11:54:58,925] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.10/site-packages/***/configuration.py:528 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-28 11:54:58,967] {task_command.py:371} INFO - Running <TaskInstance: send_stock_data.send_data scheduled__2024-07-28T11:53:00+00:00 [running]> on host 77ea918c6e81
+[2024-07-28 11:54:59,031] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=send_stock_data
+AIRFLOW_CTX_TASK_ID=send_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-28T11:53:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-28T11:53:00+00:00
+[2024-07-28 11:59:59,071] {logging_mixin.py:115} INFO - Gửi thất bại: KafkaError{code=_MSG_TIMED_OUT,val=-192,str="Local: Message timed out"}
+[2024-07-28 11:59:59,072] {logging_mixin.py:115} INFO - Sent: {'date_time': '26/07/2024, 20:00:01', 'open': 218.85, 'high': 219.49, 'low': 216.01, 'current_price': 217.96, 'previous_close': 217.49, 'change_percent': 0.2161}
+[2024-07-28 12:00:02,314] {python.py:173} INFO - Done. Returned value was: None
+[2024-07-28 12:00:02,327] {taskinstance.py:1415} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=send_data, execution_date=20240728T115300, start_date=20240728T115458, end_date=20240728T120002
+[2024-07-28 12:00:02,375] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-07-28 12:00:02,399] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
