@@ -1,0 +1,34 @@
+[2024-08-07T04:10:41.615+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T04:10:41.665+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: GOOGL.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:10:41.676+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: GOOGL.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:10:41.677+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T04:10:41.703+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T04:10:41.714+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=441) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T04:10:41.716+0000] {standard_task_runner.py:64} INFO - Started process 443 to run task
+[2024-08-07T04:10:41.714+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'GOOGL', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '78', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp_amhlxdm']
+[2024-08-07T04:10:41.717+0000] {standard_task_runner.py:91} INFO - Job 78: Subtask get_data
+[2024-08-07T04:10:41.738+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T04:10:41.785+0000] {task_command.py:426} INFO - Running <TaskInstance: GOOGL.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host 8b57410c2c11
+[2024-08-07T04:10:41.925+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='GOOGL' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T04:10:41.927+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T04:10:42.946+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T04:10:43.063+0000] {python.py:237} INFO - Done. Returned value was: [                  Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2004-08-19    2.502503    2.604104  ...    2.508132  893181924
+2004-08-20    2.527778    2.729730  ...    2.707353  456686856
+2004-08-23    2.771522    2.839840  ...    2.734599  365122512
+2004-08-24    2.783784    2.792793  ...    2.621365  304946748
+2004-08-25    2.626627    2.702703  ...    2.649612  183772044
+...                ...         ...  ...         ...        ...
+2024-07-31  173.240005  174.250000  ...  171.539993   25729100
+2024-08-01  170.250000  174.050003  ...  170.759995   24531400
+2024-08-02  166.440002  168.509995  ...  166.660004   29130100
+2024-08-05  155.500000  164.429993  ...  159.250000   53630700
+2024-08-06  159.330002  160.570007  ...  158.289993   48928900
+
+[5025 rows x 6 columns]]
+[2024-08-07T04:10:43.079+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T04:10:43.180+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=GOOGL, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T041041, end_date=20240807T041043
+[2024-08-07T04:10:43.217+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-07T04:10:43.252+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T04:10:43.257+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,34 @@
+[2024-08-07T04:34:44.906+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T04:34:44.953+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: QCOM_streaming_data.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:34:44.973+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: QCOM_streaming_data.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:34:44.974+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T04:34:44.998+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T04:34:45.009+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1233) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T04:34:45.008+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'QCOM_streaming_data', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp4b2o6ncu']
+[2024-08-07T04:34:45.010+0000] {standard_task_runner.py:64} INFO - Started process 1235 to run task
+[2024-08-07T04:34:45.010+0000] {standard_task_runner.py:91} INFO - Job 105: Subtask get_data
+[2024-08-07T04:34:45.033+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T04:34:45.084+0000] {task_command.py:426} INFO - Running <TaskInstance: QCOM_streaming_data.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host 8b57410c2c11
+[2024-08-07T04:34:45.211+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='QCOM_streaming_data' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T04:34:45.213+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T04:34:46.940+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T04:34:47.063+0000] {python.py:237} INFO - Done. Returned value was: [                  Open        High  ...   Adj Close    Volume
+Date                                ...                      
+2000-01-03   99.625000  100.000000  ...   57.373070  91334000
+2000-01-04   86.281250   87.656250  ...   51.853722  63567400
+2000-01-05   79.937500   81.625000  ...   50.053951  93778400
+2000-01-06   74.250000   78.000000  ...   44.814587  58782600
+2000-01-07   67.000000   75.250000  ...   47.994202  68198600
+...                ...         ...  ...         ...       ...
+2024-07-31  175.580002  181.080002  ...  180.949997  19222200
+2024-08-01  171.759995  176.970001  ...  164.000000  24795000
+2024-08-02  160.520004  164.259995  ...  159.309998  16618900
+2024-08-05  153.270004  162.820007  ...  157.949997  12733900
+2024-08-06  158.419998  163.630005  ...  158.720001   9294500
+
+[6187 rows x 6 columns]]
+[2024-08-07T04:34:47.081+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T04:34:47.193+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=QCOM_streaming_data, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T043444, end_date=20240807T043447
+[2024-08-07T04:34:47.238+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-07T04:34:47.279+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T04:34:47.285+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

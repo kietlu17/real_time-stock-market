@@ -8,11 +8,11 @@ from confluent_kafka import Producer
 
 # Configuration parameters for Kafka
 KAFKA_BOOTSTRAP_SERVERS = ['broker:29092']
-KAFKA_TOPIC = 'stock_data'
+KAFKA_TOPIC = 'TPE'
 PAUSE_INTERVAL = 10
 STREAMING_DURATION = 120
 
-symbols = ['AAPL', 'GOOGL', 'AMZN', 'MSFT', 'TSLA']
+symbols = ['TPE']
 
 # Kafka configuration function
 def configure_kafka(servers=KAFKA_BOOTSTRAP_SERVERS):
@@ -30,16 +30,16 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG(dag_id='send_stock_data',
+dag = DAG(dag_id='TPE_streaming',
           default_args=default_args,
-          schedule_interval='0 5 * * *',
+          schedule_interval='@once',
           catchup=False)
 
 # Function to get data from API
 def get_data(ti):
     data = []
     for symbol in symbols:
-        data.append(yf.download(symbol, period='1d', interval='1m'))
+        data.append(yf.download(symbol, start='2000-01-01', interval='1d'))
     ti.xcom_push(key='data', value=data)
     return data
 

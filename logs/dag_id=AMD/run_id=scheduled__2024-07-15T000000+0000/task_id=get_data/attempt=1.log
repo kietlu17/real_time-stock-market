@@ -1,0 +1,34 @@
+[2024-08-07T04:12:18.435+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T04:12:18.488+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AMD.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:12:18.506+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AMD.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:12:18.507+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T04:12:18.532+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T04:12:18.544+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=514) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T04:12:18.546+0000] {standard_task_runner.py:64} INFO - Started process 516 to run task
+[2024-08-07T04:12:18.544+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AMD', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '81', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmptg7w4t7k']
+[2024-08-07T04:12:18.547+0000] {standard_task_runner.py:91} INFO - Job 81: Subtask get_data
+[2024-08-07T04:12:18.573+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T04:12:18.625+0000] {task_command.py:426} INFO - Running <TaskInstance: AMD.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host 8b57410c2c11
+[2024-08-07T04:12:18.764+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='AMD' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T04:12:18.766+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T04:12:19.687+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T04:12:19.801+0000] {python.py:237} INFO - Done. Returned value was: [                  Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2000-01-03   14.968750   15.593750  ...   15.500000    7843200
+2000-01-04   15.125000   15.500000  ...   14.625000    6290200
+2000-01-05   14.531250   15.062500  ...   15.000000    8204600
+2000-01-06   15.500000   16.000000  ...   16.000000   11489400
+2000-01-07   15.406250   16.406250  ...   16.250000    8543400
+...                ...         ...  ...         ...        ...
+2024-07-31  150.729996  153.600006  ...  144.479996  114306800
+2024-08-01  145.000000  147.289993  ...  132.539993   94731900
+2024-08-02  133.500000  137.100006  ...  132.500000   78562000
+2024-08-05  122.160004  139.139999  ...  134.820007   76089400
+2024-08-06  135.149994  136.440002  ...  130.179993   64279300
+
+[6187 rows x 6 columns]]
+[2024-08-07T04:12:19.817+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T04:12:19.910+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=AMD, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T041218, end_date=20240807T041219
+[2024-08-07T04:12:19.967+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-07T04:12:20.010+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T04:12:20.016+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

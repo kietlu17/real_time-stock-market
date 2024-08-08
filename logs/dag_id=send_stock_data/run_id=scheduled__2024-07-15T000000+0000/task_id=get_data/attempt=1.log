@@ -1,0 +1,110 @@
+[2024-08-05T09:39:48.570+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T09:39:48.599+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_stock_data.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-05T09:39:48.607+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_stock_data.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-05T09:39:48.607+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-05T09:39:48.620+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-05T09:39:48.627+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=428) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-05T09:39:48.628+0000] {standard_task_runner.py:64} INFO - Started process 430 to run task
+[2024-08-05T09:39:48.627+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp29dznk5o']
+[2024-08-05T09:39:48.629+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask get_data
+[2024-08-05T09:39:48.641+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-05T09:39:48.669+0000] {task_command.py:426} INFO - Running <TaskInstance: send_stock_data.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host c1646deff093
+[2024-08-05T09:39:48.747+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='send_stock_data' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-05T09:39:48.748+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T09:39:49.678+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-05T09:39:49.678+0000] {multi.py:171} ERROR - 
+1 Failed download:
+[2024-08-05T09:39:49.679+0000] {multi.py:184} ERROR - ['AAPL']: ValueError("time data '2000' does not match format '%Y-%m-%d'")
+[2024-08-05T09:39:49.738+0000] {python.py:237} INFO - Done. Returned value was: [Empty DataFrame
+Columns: [Open, High, Low, Close, Adj Close, Volume]
+Index: []]
+[2024-08-05T09:39:49.742+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T09:39:49.761+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240805T093948, end_date=20240805T093949
+[2024-08-05T09:39:49.804+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-05T09:39:49.825+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T09:39:49.828+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-08-07T03:25:04.152+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T03:25:04.202+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_stock_data.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T03:25:04.214+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_stock_data.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T03:25:04.215+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T03:25:04.237+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T03:25:04.248+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=259) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T03:25:04.249+0000] {standard_task_runner.py:64} INFO - Started process 261 to run task
+[2024-08-07T03:25:04.248+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmpyl3h87xn']
+[2024-08-07T03:25:04.250+0000] {standard_task_runner.py:91} INFO - Job 64: Subtask get_data
+[2024-08-07T03:25:04.274+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T03:25:04.327+0000] {task_command.py:426} INFO - Running <TaskInstance: send_stock_data.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host e578c0144fd7
+[2024-08-07T03:25:04.464+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='send_stock_data' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T03:25:04.465+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T03:25:06.161+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T03:25:06.774+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T03:25:07.314+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T03:25:07.805+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T03:25:09.406+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T03:25:09.407+0000] {multi.py:171} ERROR - 
+1 Failed download:
+[2024-08-07T03:25:09.409+0000] {multi.py:184} ERROR - ['FB']: YFTzMissingError('$%ticker%: possibly delisted; No timezone found')
+[2024-08-07T03:25:09.768+0000] {python.py:237} INFO - Done. Returned value was: [                  Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2000-01-03    0.936384    1.004464  ...    0.844981  535796800
+2000-01-04    0.966518    0.987723  ...    0.773741  512377600
+2000-01-05    0.926339    0.987165  ...    0.785063  778321600
+2000-01-06    0.947545    0.955357  ...    0.717125  767972800
+2000-01-07    0.861607    0.901786  ...    0.751094  460734400
+...                ...         ...  ...         ...        ...
+2024-07-31  221.440002  223.820007  ...  222.080002   50036300
+2024-08-01  224.369995  224.479996  ...  218.360001   62501000
+2024-08-02  219.149994  225.600006  ...  219.860001  105568600
+2024-08-05  199.089996  213.500000  ...  209.270004  119548600
+2024-08-06  205.300003  209.990005  ...  207.229996   69548700
+
+[6187 rows x 6 columns],                   Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2004-08-19    2.502503    2.604104  ...    2.508132  893181924
+2004-08-20    2.527778    2.729730  ...    2.707353  456686856
+2004-08-23    2.771522    2.839840  ...    2.734599  365122512
+2004-08-24    2.783784    2.792793  ...    2.621365  304946748
+2004-08-25    2.626627    2.702703  ...    2.649612  183772044
+...                ...         ...  ...         ...        ...
+2024-07-31  173.240005  174.250000  ...  171.539993   25729100
+2024-08-01  170.250000  174.050003  ...  170.759995   24531400
+2024-08-02  166.440002  168.509995  ...  166.660004   29130100
+2024-08-05  155.500000  164.429993  ...  159.250000   53630700
+2024-08-06  159.330002  160.570007  ...  158.289993   48928900
+
+[5025 rows x 6 columns],                   Open        High  ...   Adj Close    Volume
+Date                                ...                      
+2000-01-03   58.687500   59.312500  ...   36.000626  53228400
+2000-01-04   56.781250   58.562500  ...   34.784523  54119000
+2000-01-05   55.562500   58.187500  ...   35.151302  64059600
+2000-01-06   56.093750   56.937500  ...   33.973785  54976600
+2000-01-07   54.312500   56.125000  ...   34.417763  62013600
+...                ...         ...  ...         ...       ...
+2024-07-31  420.500000  421.779999  ...  418.350006  42891400
+2024-08-01  420.790009  427.459991  ...  417.109985  30296400
+2024-08-02  412.489990  415.000000  ...  408.489990  29437900
+2024-08-05  389.170013  401.040009  ...  395.149994  40709200
+2024-08-06  400.000000  405.670013  ...  399.609985  24896800
+
+[6187 rows x 6 columns],                   Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2000-01-03    4.075000    4.478125  ...    4.468750  322352000
+2000-01-04    4.268750    4.575000  ...    4.096875  349748000
+2000-01-05    3.525000    3.756250  ...    3.487500  769148000
+2000-01-06    3.565625    3.634375  ...    3.278125  375040000
+2000-01-07    3.350000    3.525000  ...    3.478125  210108000
+...                ...         ...  ...         ...        ...
+2024-07-31  185.050003  187.940002  ...  186.979996   41667300
+2024-08-01  189.289993  190.600006  ...  184.070007   70435600
+2024-08-02  166.750000  168.770004  ...  167.899994  141448400
+2024-08-05  154.210007  162.960007  ...  161.020004   83149400
+2024-08-06  161.710007  165.080002  ...  161.929993   59858500
+
+[6187 rows x 6 columns], Empty DataFrame
+Columns: [Open, High, Low, Close, Adj Close, Volume]
+Index: []]
+[2024-08-07T03:25:09.825+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T03:25:10.149+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T032504, end_date=20240807T032510
+[2024-08-07T03:25:10.225+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-07T03:25:10.257+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T03:25:10.261+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,34 @@
+[2024-08-07T04:32:19.791+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T04:32:19.847+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: META_streaming.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:32:19.860+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: META_streaming.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:32:19.861+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T04:32:19.887+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T04:32:19.897+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1149) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T04:32:19.899+0000] {standard_task_runner.py:64} INFO - Started process 1151 to run task
+[2024-08-07T04:32:19.897+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'META_streaming', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp73v6wqcp']
+[2024-08-07T04:32:19.900+0000] {standard_task_runner.py:91} INFO - Job 102: Subtask get_data
+[2024-08-07T04:32:19.920+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T04:32:19.969+0000] {task_command.py:426} INFO - Running <TaskInstance: META_streaming.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host 8b57410c2c11
+[2024-08-07T04:32:20.097+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='META_streaming' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T04:32:20.099+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T04:32:20.952+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T04:32:21.035+0000] {python.py:237} INFO - Done. Returned value was: [                  Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2012-05-18   42.049999   45.000000  ...   38.151600  573576400
+2012-05-21   36.529999   36.660000  ...   33.960213  168192700
+2012-05-22   32.610001   33.590000  ...   30.936428  101786600
+2012-05-23   31.370001   32.500000  ...   31.934378   73600000
+2012-05-24   32.950001   33.209999  ...   32.962265   50237200
+...                ...         ...  ...         ...        ...
+2024-07-31  471.019989  476.500000  ...  474.829987   24285800
+2024-08-01  521.000000  527.169983  ...  497.739990   43083100
+2024-08-02  489.000000  501.149994  ...  488.140015   24044700
+2024-08-05  451.350006  483.480011  ...  475.730011   21396200
+2024-08-06  479.000000  502.559998  ...  494.089996   20902900
+
+[3073 rows x 6 columns]]
+[2024-08-07T04:32:21.050+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T04:32:21.134+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=META_streaming, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T043219, end_date=20240807T043221
+[2024-08-07T04:32:21.199+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-07T04:32:21.237+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T04:32:21.244+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

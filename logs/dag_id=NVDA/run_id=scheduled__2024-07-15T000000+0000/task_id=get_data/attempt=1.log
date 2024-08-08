@@ -1,0 +1,34 @@
+[2024-08-07T04:20:59.724+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T04:20:59.775+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: NVDA.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:20:59.789+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: NVDA.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:20:59.791+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T04:20:59.822+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T04:20:59.834+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=759) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T04:20:59.834+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'NVDA', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '87', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmpgy3xdt1l']
+[2024-08-07T04:20:59.836+0000] {standard_task_runner.py:64} INFO - Started process 761 to run task
+[2024-08-07T04:20:59.836+0000] {standard_task_runner.py:91} INFO - Job 87: Subtask get_data
+[2024-08-07T04:20:59.863+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T04:20:59.919+0000] {task_command.py:426} INFO - Running <TaskInstance: NVDA.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host 8b57410c2c11
+[2024-08-07T04:21:00.055+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='NVDA' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T04:21:00.057+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T04:21:01.165+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T04:21:01.292+0000] {python.py:237} INFO - Done. Returned value was: [                  Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2000-01-03    0.098438    0.099219  ...    0.089453  300912000
+2000-01-04    0.095833    0.096094  ...    0.087065  300480000
+2000-01-05    0.092188    0.093750  ...    0.084199  188352000
+2000-01-06    0.091797    0.091797  ...    0.078705  120480000
+2000-01-07    0.085417    0.088151  ...    0.080019   71184000
+...                ...         ...  ...         ...        ...
+2024-07-31  112.900002  118.339996  ...  117.019997  473174200
+2024-08-01  117.529999  120.160004  ...  109.209999  523462300
+2024-08-02  103.760002  108.720001  ...  107.269997  482027500
+2024-08-05   92.059998  103.410004  ...  100.449997  552842400
+2024-08-06  103.839996  107.709999  ...  104.250000  405830900
+
+[6187 rows x 6 columns]]
+[2024-08-07T04:21:01.309+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T04:21:01.417+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=NVDA, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T042059, end_date=20240807T042101
+[2024-08-07T04:21:01.457+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-07T04:21:01.494+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T04:21:01.499+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

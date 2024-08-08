@@ -1,0 +1,40 @@
+[2024-08-05T14:45:27.584+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T14:45:27.656+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-08-05T14:20:00+00:00 [queued]>
+[2024-08-05T14:45:27.673+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-08-05T14:20:00+00:00 [queued]>
+[2024-08-05T14:45:27.674+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-08-05T14:45:27.698+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): send_data> on 2024-08-05 14:20:00+00:00
+[2024-08-05T14:45:27.709+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=562) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-05T14:45:27.710+0000] {standard_task_runner.py:64} INFO - Started process 565 to run task
+[2024-08-05T14:45:27.709+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'send_data', 'scheduled__2024-08-05T14:20:00+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp62wcy7vo']
+[2024-08-05T14:45:27.711+0000] {standard_task_runner.py:91} INFO - Job 20: Subtask send_data
+[2024-08-05T14:45:27.732+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-05T14:45:27.781+0000] {task_command.py:426} INFO - Running <TaskInstance: send_stock_data.send_data scheduled__2024-08-05T14:20:00+00:00 [running]> on host c1646deff093
+[2024-08-05T14:45:27.925+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='send_stock_data' AIRFLOW_CTX_TASK_ID='send_data' AIRFLOW_CTX_EXECUTION_DATE='2024-08-05T14:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-05T14:20:00+00:00'
+[2024-08-05T14:45:27.927+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T14:45:28.577+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T14:45:28.578+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/airflow_stream.py", line 77, in send_data
+    producer.produce(KAFKA_TOPIC, key=topics[i], value=json.dumps(data), callback=delivery_report)
+                                      ~~~~~~^^^
+IndexError: list index out of range
+[2024-08-05T14:45:28.597+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=send_stock_data, task_id=send_data, run_id=scheduled__2024-08-05T14:20:00+00:00, execution_date=20240805T142000, start_date=20240805T144527, end_date=20240805T144528
+[2024-08-05T14:45:28.614+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 20 for task send_data (list index out of range; 565)
+[2024-08-05T14:45:28.648+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-08-05T14:45:28.673+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T14:45:28.677+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

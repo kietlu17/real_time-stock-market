@@ -1,0 +1,134 @@
+[2024-08-05T09:39:52.479+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T09:39:52.509+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-05T09:39:52.516+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-05T09:39:52.517+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-05T09:39:52.530+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): send_data> on 2024-07-15 00:00:00+00:00
+[2024-08-05T09:39:52.536+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=444) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-05T09:39:52.537+0000] {standard_task_runner.py:64} INFO - Started process 446 to run task
+[2024-08-05T09:39:52.537+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'send_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmpm7te0fbp']
+[2024-08-05T09:39:52.538+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask send_data
+[2024-08-05T09:39:52.551+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-05T09:39:52.578+0000] {task_command.py:426} INFO - Running <TaskInstance: send_stock_data.send_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host c1646deff093
+[2024-08-05T09:39:52.645+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='send_stock_data' AIRFLOW_CTX_TASK_ID='send_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-05T09:39:52.647+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T09:39:52.676+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-05T09:39:52.677+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T09:39:52.684+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=send_stock_data, task_id=send_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240805T093952, end_date=20240805T093952
+[2024-08-05T09:39:52.711+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-05T09:39:52.725+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T09:39:52.728+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-08-07T03:25:18.170+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T03:25:18.219+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T03:25:18.230+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_stock_data.send_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T03:25:18.232+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T03:25:18.255+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): send_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T03:25:18.270+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=317) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T03:25:18.269+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'send_stock_data', 'send_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmp795oah5w']
+[2024-08-07T03:25:18.273+0000] {standard_task_runner.py:91} INFO - Job 66: Subtask send_data
+[2024-08-07T03:25:18.273+0000] {standard_task_runner.py:64} INFO - Started process 319 to run task
+[2024-08-07T03:25:18.295+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T03:25:18.349+0000] {task_command.py:426} INFO - Running <TaskInstance: send_stock_data.send_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host e578c0144fd7
+[2024-08-07T03:25:18.482+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='send_stock_data' AIRFLOW_CTX_TASK_ID='send_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T03:25:18.484+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T03:25:28.852+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:25:38.853+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:25:48.854+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:25:58.856+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:26:08.855+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:26:18.856+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:26:28.858+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:26:38.868+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:26:48.870+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:26:58.871+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:27:08.871+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:27:18.872+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:27:28.887+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:27:38.888+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:27:48.890+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:27:58.892+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:28:08.892+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:28:18.894+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:28:28.901+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:28:38.901+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:28:48.907+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:28:58.911+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:29:08.911+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:29:18.921+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:29:28.930+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:29:38.930+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:29:48.976+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:29:58.978+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:30:08.979+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:30:18.980+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:30:28.982+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:30:38.984+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:30:48.988+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:30:58.990+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:31:08.989+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:31:18.991+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:31:28.993+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:31:38.993+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:31:48.995+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:31:58.997+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:32:08.997+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:32:18.999+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:32:29.000+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:32:39.001+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:32:49.003+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:32:59.004+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:33:09.004+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:33:19.005+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:33:29.007+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:33:39.007+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:33:49.009+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:33:59.010+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:34:09.011+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:34:19.012+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:34:29.013+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:34:39.013+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:34:49.015+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:34:59.017+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:35:09.017+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:35:19.019+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:35:29.020+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:35:39.020+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:35:49.022+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:35:59.023+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:36:09.024+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:36:19.026+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:36:29.028+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:36:39.029+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:36:49.031+0000] {logging_mixin.py:188} INFO - Delivered message to AAPL [0]
+[2024-08-07T03:36:53.121+0000] {local_task_job_runner.py:124} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-08-07T03:36:53.132+0000] {process_utils.py:132} INFO - Sending 15 to group 319. PIDs of all processes in the group: [319]
+[2024-08-07T03:36:53.135+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 319
+[2024-08-07T03:36:53.137+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-08-07T03:36:53.142+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T03:36:53.168+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/airflow_stream.py", line 80, in send_data
+    time.sleep(0.1)
+    ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2613, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-08-07T03:36:53.233+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=send_stock_data, task_id=send_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T032518, end_date=20240807T033653
+[2024-08-07T03:36:53.325+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=319, status='terminated', exitcode=2, started='03:25:17') (319) terminated with exit code 2
+[2024-08-07T03:36:53.327+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 143
+[2024-08-07T03:36:53.375+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T03:36:54.334+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

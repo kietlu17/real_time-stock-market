@@ -1,0 +1,34 @@
+[2024-08-07T04:25:38.845+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T04:25:38.894+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: NFLX.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:25:38.908+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: NFLX.get_data scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-08-07T04:25:38.910+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-07T04:25:38.935+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-07-15 00:00:00+00:00
+[2024-08-07T04:25:38.947+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=921) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-08-07T04:25:38.946+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'NFLX', 'get_data', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/***_stream.py', '--cfg-path', '/tmp/tmpkorfzkd7']
+[2024-08-07T04:25:38.949+0000] {standard_task_runner.py:64} INFO - Started process 923 to run task
+[2024-08-07T04:25:38.949+0000] {standard_task_runner.py:91} INFO - Job 93: Subtask get_data
+[2024-08-07T04:25:38.971+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-08-07T04:25:39.026+0000] {task_command.py:426} INFO - Running <TaskInstance: NFLX.get_data scheduled__2024-07-15T00:00:00+00:00 [running]> on host 8b57410c2c11
+[2024-08-07T04:25:39.153+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='NFLX' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-08-07T04:25:39.155+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T04:25:40.230+0000] {logging_mixin.py:188} WARNING - [*********************100%%**********************]  1 of 1 completed
+[2024-08-07T04:25:40.356+0000] {python.py:237} INFO - Done. Returned value was: [                  Open        High  ...   Adj Close     Volume
+Date                                ...                       
+2002-05-23    1.156429    1.242857  ...    1.196429  104790000
+2002-05-24    1.214286    1.225000  ...    1.210000   11104800
+2002-05-28    1.213571    1.232143  ...    1.157143    6609400
+2002-05-29    1.164286    1.164286  ...    1.103571    6757800
+2002-05-30    1.107857    1.107857  ...    1.071429   10154200
+...                ...         ...  ...         ...        ...
+2024-07-31  626.570007  633.599976  ...  628.349976    3134900
+2024-08-01  629.250000  646.710022  ...  624.849976    3720600
+2024-08-02  620.979980  625.270020  ...  613.640015    3523000
+2024-08-05  587.039978  604.559998  ...  598.549988    4044200
+2024-08-06  600.619995  622.450012  ...  609.570007    4314100
+
+[5589 rows x 6 columns]]
+[2024-08-07T04:25:40.375+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T04:25:40.487+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=NFLX, task_id=get_data, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240807T042538, end_date=20240807T042540
+[2024-08-07T04:25:40.531+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-07T04:25:40.574+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T04:25:40.578+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
